@@ -19,7 +19,7 @@
     1.2 - Global properties (body, common classes, structure etc)
     1.3 - Page section block
     1.4 - Typography (section title, links, page dividers)
-    1.5 - Buttons 
+    1.5 - Buttons fhe
     1.6 - Form / Input / Textarea  
     1.7 - Theme Colors
     1.8 - Theme Fonts
@@ -2540,4 +2540,12 @@ a:focus {
 
 .feature-info-text {
     font-size: 18px;
+}
+
+.header-home {
+    background: rgba(0, 0, 0, 0);
+    transition: allease-out 0.4s;
+    position: absolute;
+    width: 100%;
+    z-index: 10; 
 }
