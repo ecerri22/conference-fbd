@@ -1,0 +1,316 @@
+@media (max-width:1200px) {
+    .theme-container{
+        padding-left: 15px;
+        padding-right: 15px;
+    }  
+}
+@media (min-width:992px)and (max-width:1024px) { 
+    .vertical-text{
+        top: 79px;
+        width: 219px;
+    }
+    .slider_button.right{
+        right: 4%;
+    }
+    .slider_button{
+        left: 4%;
+    }
+    .carousel-inner .container{
+        top: 20%;
+    }
+    .banner-details .title-wrap{
+        margin-bottom: 0;
+    }
+    .variation-slider .countdown-wrapper.space-bottom-45{
+        padding-bottom: 15px;
+    }
+    /*tabs*/
+    .schedule-tabs li a, .schedule-tabs > li.active > a{
+        display: inline-block;
+        padding-left: 15px;
+        padding-right: 15px;
+        vertical-align: middle;
+    }
+    .schedule-tabs li a .number{
+        font-size: 25px;
+    }
+    .schedule-tabs li a span{
+        float: left;
+    }
+    .schedule-tabs li a .day > b{
+        display: block;
+    }   
+}
+@media (min-width:768px)and (max-width:991px){
+    .feature-icon{
+        height: 55px;
+        width: 60px;
+        font-size: 26px;
+    }
+    .latest-event .feature-box{
+        margin-top: 14px;
+    }
+    .feature-info{
+        padding-top: 0;
+        width: calc(100% - 80px);
+    }
+    .blog-bg{
+        margin-top: 3px;
+    }
+    .carousel-inner .container{
+        top: 130px;
+    }
+    .slider_button{
+        top: 200px;
+        left: 3%;
+    }
+    .slider_button.right{
+        right: 3%;
+    }
+    .variation-slider .banner-details .title-wrap{
+        margin-bottom: 5px;
+    }
+    .variation-slider .banner-details h2{
+        font-size: 30px
+    }
+    .variation-slider .theme-btn-big{
+        padding: 8px 40px;
+    }
+    /*tabs*/
+    .schedule-tabs li a, .schedule-tabs > li.active > a{
+        display: inline-block;
+        padding-left: 12px;
+        padding-right: 12px;
+        vertical-align: middle;
+    }
+    .schedule-tabs li a .number{
+        font-size: 20px;
+    }
+    .schedule-tabs li a span{
+        float: left;
+    }
+    .schedule-tabs li a .day > b{
+        display: block;
+    }
+    .schedule-tabs li a .day {
+        margin-top: 0;
+    }
+
+    /*comment*/
+    .comment-metadata{
+        display: block;
+        padding-left: 80px;
+    }
+    .comment-content{
+        width: 80%;
+    }
+    .comments-box ol{
+        padding-left: 20px;
+    }
+    .comment-form-author, .comment-form-email, .comment-form-url {
+        float: none;
+        width: 100%;
+    }
+    .comment-form-email {
+        margin: auto 0;
+    }
+    .carousel-inner .countdown-wrapper.space-bottom-45{
+        padding-bottom: 30px;
+    }
+    .carousel-inner .item > img {
+        min-height: 550px;
+    }
+
+    /*video version*/
+    .video-warp iframe{
+        min-height: auto;
+    }    
+}
+@media (max-width:767px) {
+
+    .logo .logo-title   {
+        float: left;
+    }
+    .primary-navbar {
+        float: left !important;
+        margin: 0;
+        padding: 10px 0;
+        background-color: rgba(0,0,0,.5);
+        width: 100%;
+    }
+    .primary-navbar .open .dropdown-menu {
+        background-color: rgba(0, 0, 0, 0.5);
+        position: relative;
+        margin: 15px;
+    }
+    /*home*/
+    .banner-wrap{
+        min-height: auto;
+        padding: 150px 0;
+    }
+    .section-heading{
+        font-size: 24px;
+    }
+    .jevent-title-1{
+        font-size: 16px;    
+    }
+    .jevent-title-2{
+        font-size: 20px;
+    }
+    .schedule-list > li{
+        padding: 0 15px 10px;
+    }
+    .section-heading{
+        font-size: 20px;
+    }
+    .banner-details h2{
+        font-size: 30px;
+    }
+    .vertical-text{
+        position: static;
+        transform: rotate(0deg);
+        width: 100% !important;
+    }
+    .latest-event{
+        width: 100% !important;
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+    .latest-event .feature-box{
+        display: inline-block;
+        width: 100% !important;
+        vertical-align: middle;
+    }
+    .feature-icon{
+        height: 50px;
+        width: 50px;
+        font-size: 24px;
+    }
+    .feature-info{
+        padding-top: 0; 
+        width: calc(100% - 70px);
+    }
+    .blog-bg{
+        margin-left: 0;
+        margin-bottom: 0;
+    }
+    .blog-wrap:nth-child(2n+1) .blog-bg{
+        margin-right: 0;
+        margin-top: 0;
+        margin-bottom: 25px;
+    }
+    .blog-post-wrap .blog-wrap .blog-bg{
+        margin-bottom: 0;
+    }
+    .event-faqs-tabs{
+        border-right: 0;
+    }
+    /*tabs*/
+    .schedule-tabs > li{
+        display: inline-block;
+        width: 100%;
+        vertical-align: middle;
+        text-align: center;
+        border: none;
+        float: none;
+    }
+    .schedule-tabs li a{
+        display: inline-block;
+        width: 100%;
+    }
+    .schedule-tabs li a .number,.schedule-tabs li a .day{
+        float: none;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    /*Home 2*/
+    .variation-slider .latest-container{
+        margin-top: 50px;
+    }
+    .variation-slider .header-wrap{
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    #blog-post.space-100{
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .sidebar {
+        padding-top: 50px;
+    }
+    /*comment*/
+    .comment-metadata{
+        display: block;
+        padding-left: 80px;
+    }
+    .comment-content{
+        width: 80%;
+    }
+    .comments-box ol{
+        padding-left: 20px;
+    }
+    .comment-form-author, .comment-form-email, .comment-form-url {
+        float: none;
+        width: 100%;
+    }
+    .comment-form-email {
+        margin: auto 0;
+    }
+    .video-warp iframe{
+        min-height: auto;
+    }
+    .variation-slider .countdown-amount{
+        font-size: 16px;
+    }
+    .variation-slider .countdown-period{
+        font-size: 12px;
+    }
+    .variation-slider .countdown-wrapper.space-bottom-45{
+        padding-bottom: 15px;
+    }
+    .variation-slider .countdown-section{
+        margin: 10px;
+    }
+    .carousel-inner .item > img {
+        min-height: 250px;
+    }
+
+}
+@media (min-width:481px) and (max-width:767px){
+    .carousel-inner .container{
+        top: 25%;
+    }
+    .carousel-inner .banner-details .title-wrap{
+        margin-bottom: 10px;
+    }
+
+
+}
+@media (max-width:480px){
+    .variation-slider .banner-details h2{
+        font-size: 16px;
+    }
+    .variation-slider .theme-btn-big {
+        font-size: 14px;
+        padding: 6px 40px;
+    }
+    .variation-slider .title-wrap{
+        display: none;
+    }
+}
+@media (max-width:380px){
+    .schedule-handler{
+        display: list-item;
+        margin: 15px 0;
+    }
+    .schedule-box{
+        width: 100%;
+    }
+    .schedule-handler > img {
+        display: block;
+        margin: auto;
+    }
+
+}

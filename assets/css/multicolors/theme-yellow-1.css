@@ -1,0 +1,35 @@
+
+a:hover,
+a:active,
+a:focus {
+    color: #ff9900;
+}
+.theme-color, .primary-navbar > li > a:hover, .primary-navbar > li > a:focus, .primary-navbar > li > a:focus, .testimonials-links .slider-btn:hover,
+.testimonials-links .slider-btn:focus, .pricing-wrap:hover .theme-btn-2, .navigation .dropdown-menu li a:hover, .navigation .dropdown-menu li a:focus, 
+.pricing-wrap:focus .theme-btn-2, .event-faqs-tabs li a:hover, .event-faqs-tabs li a:focus, .event-faqs-tabs li.active > a, .slider_button:hover,
+.slider_button:focus, .event-faqs-tabs li.active > a:hover, .event-faqs-tabs li.active > a:focus, .contact-form .theme-btn,.footer-social a:hover, 
+.footer-social a:focus, .breadcrumb-menubar > li > a:hover, .breadcrumb-menubar > li > a:focus, .widget-wrap ul li.active a, 
+.comment-form input[type="submit"]:hover, .comment-form input[type="submit"]:focus, .blog-pagination li a, .pricing-wrap.featured:hover::before, 
+.pricing-wrap.featured:focus::before, .blog-post-wrap .post-title:hover, .blog-post-wrap .post-title:focus{
+    color: #ff9900; 
+}
+.object, .theme-btn, .theme-btn-big, .theme-color-bg, .schedule-tabs li.active a,.schedule-tabs li a:hover,.schedule-tabs li a:focus,.schedule-tabs > li.active > a,
+.schedule-tabs > li.active > a:hover, .schedule-tabs > li.active > a:focus, .social-overlay li a:hover, .social-overlay li a:focus,.pricing-wrap:hover,
+.pricing-wrap:focus, .register-bg,.contact-form .theme-btn:hover,.contact-form .theme-btn:focus, .to-top,.comment-form input[type="submit"],
+.blog-pagination > .active > a,.blog-pagination > .active > a:hover, .blog-pagination > .active > a:focus, .blog-pagination > li > a:hover, .blog-pagination > li > a:focus{
+    background-color: #ff9900;
+}
+.theme-btn:hover,.theme-btn:focus, .theme-btn-big:hover,.theme-btn-big:focus,
+.donation-wrap .theme-btn:hover,.donation-wrap .theme-btn:focus{
+    border-color: #ff9900;
+    color: #ff9900;
+    background-color: #fff;
+}
+.title-devider .line-1 ,.title-devider .line-2, .title-devider .line-3, .testimonials-links .slider-btn:hover,.testimonials-links .slider-btn:focus,
+.slider_button:hover, .slider_button:focus, .tagcloud > a:hover, .tagcloud > a:focus,.post-previous a:hover, .post-next a:hover,.post-previous a:focus,
+.post-next a:focus, .comment-form input[type="submit"], .comment-form input[type="submit"]:hover,.comment-form input[type="submit"]:focus,
+.blog-pagination li a, .blog-pagination .active a,.blog-pagination > .active > a:hover, .blog-pagination > .active > a:focus, .blog-pagination > li > a:hover, 
+.blog-pagination > li > a:focus{
+    border-color: #ff9900;
+}
+   
