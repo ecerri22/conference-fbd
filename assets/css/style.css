@@ -346,7 +346,7 @@ img{
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('../img/background/faculty_image.jpg') no-repeat center center;
+    background: url('../img/background/fakulteti-ekonomik-3-uniel') no-repeat center center;
     background-size: cover; 
     z-index: 0;
 }
@@ -1139,7 +1139,6 @@ a:focus {
     border-radius: 50%;
     display: inline-block;
     height: 20rem;
-    margin-right: 45px;
     vertical-align: middle;
     width: 20rem;
     overflow: hidden;
@@ -2532,8 +2531,13 @@ a:focus {
 }
 
 .speakers-media img {
-    width: 100%;  /* Ensures it fills the div */
-    height: 180px;  /* Fixed height to prevent distortion */
-    object-fit: cover;  /* Keeps aspect ratio while cropping */
-    border-radius: 50%;  /* Optional: Makes it less "egg-like" */
+    width: 100%;  
+    height: 180px; 
+    object-fit: cover; 
+    border-radius: 50%;  
+}
+
+
+.feature-info-text {
+    font-size: 18px;
 }
