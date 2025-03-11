@@ -2549,3 +2549,47 @@ a:focus {
     width: 100%;
     z-index: 10; 
 }
+
+/* Contact Us Section Styling */
+.contact-us {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.contact-us h2 {
+    font-size: 28px;
+    color: #06d0d7;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.contact-info {
+    max-width: 600px;
+    margin: auto;
+    padding: 30px;
+}
+
+.contact-info h5 {
+    font-size: 20px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.contact-info a {
+    color: #06d0d7;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
