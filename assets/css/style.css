@@ -2594,3 +2594,16 @@ a:focus {
 .contact-info a:hover {
     text-decoration: underline;
 }
+
+
+.navbar-nav > li > a {
+    font-size: 13px;
+}
+
+
+
+.logo-tabs-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+} 
