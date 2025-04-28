@@ -151,23 +151,34 @@
               
                 for (let i = 1; i <= totalImages; i++) {
                   const delay = 0.5 + (i * 0.1);
+                  const imagePath = `assets/img/event_gallery/photo${i}.JPG`;
               
-                  const colDiv = document.createElement('div');
-                  colDiv.className = 'col-md-4 col-sm-6 space-bottom-30 wow fadeInUp';
-                  colDiv.setAttribute('data-wow-delay', `${delay}s`);
+                  // Create an Image object to check if file exists
+                  const img = new Image();
+                  img.src = imagePath;
               
-                  colDiv.innerHTML = `
-                    <div class="gallery-item">
-                      <a href="assets/img/event_gallery/photo${i}.JPG" class="glightbox" data-gallery="conference-gallery">
-                        <img src="assets/img/event_gallery/photo${i}.JPG" alt="Conference Photo ${i}" class="img-responsive img-thumbnail">
-                      </a>
-                    </div>
-                  `;
+                  img.onload = function () {
+                    // Only if the image loads successfully
+                    const colDiv = document.createElement('div');
+                    colDiv.className = 'col-md-4 col-sm-6 space-bottom-30 wow fadeInUp';
+                    colDiv.setAttribute('data-wow-delay', `${delay}s`);
               
-                  galleryContainer.appendChild(colDiv);
+                    colDiv.innerHTML = `
+                      <div class="gallery-item">
+                        <a href="${imagePath}" class="glightbox" data-gallery="conference-gallery">
+                          <img src="${imagePath}" alt="Conference Photo ${i}" class="img-responsive img-thumbnail">
+                        </a>
+                      </div>
+                    `;
+              
+                    galleryContainer.appendChild(colDiv);
+                  };
+              
+                  img.onerror = function () {
+                    // If the image does NOT exist, skip adding it (do nothing)
+                    console.warn(`Photo not found: photo${i}.JPG`);
+                  };
                 }
-              
-               
               </script>
               
 
