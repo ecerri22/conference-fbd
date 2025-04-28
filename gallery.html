@@ -22,6 +22,16 @@
 
         <link href="assets/css/multicolor/theme-color.css" rel="stylesheet" id="theme-config-link">      
 
+        <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
+
+        <style>
+        .gallery-item img {
+            height: 250px;
+            width: 100%;
+            object-fit: cover;
+        }
+        </style>
+
         <!--[if lt IE 9]>
         <script src="assets/plugins/iesupport/html5shiv.js"></script>
         <script src="assets/plugins/iesupport/respond.js"></script>
@@ -44,7 +54,7 @@
                                         <a href="index.html"> 12th FBL Conference </a>
                                     </h2>
                                 </div>
-                                
+
                                 <div class="navbar-header">
                                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#primary-navigation" >
                                         <span class="sr-only">Toggle navigation</span>
@@ -86,15 +96,16 @@
 
                                             <li>
                                                 <a href="previousConferences.html">Past conferences</a>
-                                            </li>  
-                                            
+                                            </li>   
+
                                             <li>
                                                 <a href="gallery.html">Gallery</a>
-                                              </li>   
-                                              
+                                            </li>   
+                                            
                                             <li>
                                                 <a href="contactUs.html">Contact us</a>
                                             </li>  
+
 
                                         </ul>
                                     </div>                         
@@ -113,50 +124,52 @@
                 <div class="theme-container container">
                     <div class="site-breadcrumb">
                         <div class="title-wrap">
-                            <h2 class="section-heading wow fadeInDown" data-wow-delay="0.8s">Call for Papers</h2>
+                            <h2 class="section-heading wow fadeInDown" data-wow-delay="0.8s">Gallery</h2>
                             <p class="title-devider wow fadeInUp"  data-wow-delay="0.8s"> <span class="line-1 wow fadeInUp"  data-wow-delay="2.0s">  </span> <span class="line-2 wow fadeInUp"  data-wow-delay="1.8s">  </span> <span class="line-3 wow fadeInUp"  data-wow-delay="1.6s">  </span></p>
                         </div>
                         <ol class="breadcrumb breadcrumb-menubar">
-                            <li><a href="index.html">Home</a>  >  <span class="theme-color"> Call for Papers</span></li>                             
+                            <li><a href="index.html">Home</a>  >  <span class="theme-color"> Gallery </span></li>                             
                         </ol>
                     </div>  
                 </div>
             </section>
             <!-- / Breadcrumbs Ends -->
 
-            <!-- Recent Blog Posts Start -->
-            <section id="blog-post" class="space-50">
+            
+            <section id="gallery" class="space-50">
                 <div class="container theme-container">
-                    <div class="row">
-                        <!-- Left Section: Photo -->
-                        <div class="col-md-4 text-center">
-                            <div class="content-box wow fadeInLeft" data-wow-delay="0.8s">
-                                <img src="assets/img/doc_cover/Screenshot 2025-03-02 202200.jpg" alt="" class="img-responsive" style="margin: 0 auto; width: 100%; height: auto; border: 3px solid #ccc;">
-                            </div>
-                        </div>
-            
-                        <!-- Right Section: Text -->
-                        <div class="col-md-8">
-                            <div class="content-box wow fadeInRight" data-wow-delay="0.8s">
-                                <p class="theme-text theme-color big-text ">
-                                    Get All the Details in One Place!
-                                </p>
-            
-                                <p class="theme-text semi-big-text space-30">Download the Call for Papers for a comprehensive guide to author guidelines, keynote speakers and topics, key dates, fees, and everything else you might need to know about our scientific conference.</p>
-
-                                <div class="text-center">
-                                    <a href="assets/pdf/CFP_Final_12th FBD International Conference.pdf" class="theme-btn btn wow zoomIn goto-register" download class="conference-title">
-                                        Download Call For Papers
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                  <div class="row" id="gallery-container">
+                    <!-- Gallery images will be generated here automatically -->
+                  </div>
                 </div>
-            </section>
-            
+              </section>
+              
 
-            <!-- / Recent Blog Posts Ends -->
+              <script>
+                const galleryContainer = document.getElementById('gallery-container');
+                const totalImages = 78;
+              
+                for (let i = 1; i <= totalImages; i++) {
+                  const delay = 0.5 + (i * 0.1);
+              
+                  const colDiv = document.createElement('div');
+                  colDiv.className = 'col-md-4 col-sm-6 space-bottom-30 wow fadeInUp';
+                  colDiv.setAttribute('data-wow-delay', `${delay}s`);
+              
+                  colDiv.innerHTML = `
+                    <div class="gallery-item">
+                      <a href="assets/img/event_gallery/photo${i}.jpg" class="glightbox" data-gallery="conference-gallery">
+                        <img src="assets/img/event_gallery/photo${i}.jpg" alt="Conference Photo ${i}" class="img-responsive img-thumbnail">
+                      </a>
+                    </div>
+                  `;
+              
+                  galleryContainer.appendChild(colDiv);
+                }
+              
+               
+              </script>
+              
 
 
             <!-- / CONTENT AREA -->
@@ -181,7 +194,7 @@
                 <section id="copy-right" class="space-35">
                     <div class="copy-right-bg">
                         <div class="container theme-container">                     
-                            <p class="copy-rights wow fadeInUp"  data-wow-delay="0.7s">© 2015 J Event </p>
+                            <p class="copy-rights wow fadeInUp"  data-wow-delay="0.7s">© 2015 J Event</p>
                         </div>
                     </div>
                 </section>
@@ -203,6 +216,18 @@
 
 
         <script src="assets/js/theme.js"></script>
+      
+          <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 
+          <script>
+             // Initialize GLightbox
+             const lightbox = GLightbox({
+                  selector: '.glightbox',
+                  touchNavigation: true,
+                  loop: true,
+                  closeButton: true,
+                  zoomable: false
+                });
+          </script>
     </body>
 </html>
