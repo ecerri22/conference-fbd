@@ -140,50 +140,136 @@
 
             
             <section id="gallery" class="space-50">
-                <div class="container theme-container">
-                  <div class="row" id="gallery-container">
-                    <!-- Gallery images will be generated here automatically -->
-                  </div>
-                </div>
-              </section>
-              
+  <div class="container theme-container">
 
-              <script>
+    <!-- Edition switch -->
+    <div class="row space-bottom-30">
+      <div class="col-xs-12 text-center">
+        <div class="btn-group" role="group" aria-label="Conference Editions">
+          <button id="btn-12" type="button" class="btn btn-default active">12th Conference Edition</button>
+          <button id="btn-13" type="button" class="btn btn-default">13th Conference Edition</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gallery grid -->
+    <div class="row" id="gallery-container">
+      <!-- Images will be generated here -->
+    </div>
+
+  </div>
+            </section>
+
+
+            <script>
                 const galleryContainer = document.getElementById('gallery-container');
-                const totalImages = 78;
-              
-                for (let i = 1; i <= totalImages; i++) {
-                  const delay = 0.5 + (i * 0.1);
-                  const imagePath = `assets/img/event_gallery/photo${i}.JPG`;
-              
-                  // Create an Image object to check if file exists
-                  const img = new Image();
-                  img.src = imagePath;
-              
-                  img.onload = function () {
-                    // Only if the image loads successfully
-                    const colDiv = document.createElement('div');
-                    colDiv.className = 'col-md-4 col-sm-6 space-bottom-30 wow fadeInUp';
-                    colDiv.setAttribute('data-wow-delay', `${delay}s`);
-              
-                    colDiv.innerHTML = `
-                      <div class="gallery-item">
-                        <a href="${imagePath}" class="glightbox" data-gallery="conference-gallery">
-                          <img src="${imagePath}" alt="Conference Photo ${i}" class="img-responsive img-thumbnail">
-                        </a>
-                      </div>
-                    `;
-              
-                    galleryContainer.appendChild(colDiv);
-                  };
-              
-                  img.onerror = function () {
-                    // If the image does NOT exist, skip adding it (do nothing)
-                    console.warn(`Photo not found: photo${i}.JPG`);
-                  };
+
+                // Configure editions here
+                const editions = {
+                    12: {
+                    folder: 'assets/img/event_gallery/12th',
+                    totalImages: 78,
+                    extension: 'JPG'
+                    },
+                    13: {
+                    folder: 'assets/img/event_gallery/13th',
+                    totalImages: 120,   // change to your real number
+                    extension: 'JPG'
+                    }
+                };
+
+                let currentEdition = 12;
+
+                function clearGallery() {
+                    galleryContainer.innerHTML = '';
                 }
-              </script>
-              
+
+                function buildGallery(editionNumber) {
+                    clearGallery();
+
+                    const { folder, totalImages, extension } = editions[editionNumber];
+
+                    for (let i = 1; i <= totalImages; i++) {
+                    const delay = 0.2 + (i * 0.03); // lighter animation delay
+                    const imagePath = `${folder}/photo${i}.${extension}`;
+
+                    const img = new Image();
+                    img.src = imagePath;
+
+                    img.onload = function () {
+                        const colDiv = document.createElement('div');
+                        colDiv.className = 'col-md-4 col-sm-6 space-bottom-30 wow fadeInUp';
+                        colDiv.setAttribute('data-wow-delay', `${delay}s`);
+
+                        // IMPORTANT: data-gallery must be the same for images you want to navigate through
+                        colDiv.innerHTML = `
+                        <div class="gallery-item">
+                            <a href="${imagePath}" class="glightbox" data-gallery="edition-${editionNumber}">
+                            <img src="${imagePath}" alt="Conference Photo ${i}" class="img-responsive img-thumbnail">
+                            </a>
+                        </div>
+                        `;
+
+                        galleryContainer.appendChild(colDiv);
+
+                        // If WOW is used, sync after adding new elements
+                        if (typeof WOW !== 'undefined') {
+                        new WOW().init();
+                        }
+
+                        // Re-initialize lightbox so newly injected links work
+                        refreshLightbox();
+                    };
+
+                    img.onerror = function () {
+                        // skip missing images
+                        // console.warn(`Missing: ${imagePath}`);
+                    };
+                    }
+                }
+
+                // Keep a single global instance; destroy/recreate when edition changes
+                let lightboxInstance = null;
+
+                function refreshLightbox() {
+                    if (lightboxInstance) {
+                    lightboxInstance.destroy();
+                    }
+
+                    lightboxInstance = GLightbox({
+                    selector: '.glightbox',
+                    touchNavigation: true,
+                    loop: true,
+                    closeButton: true, // shows the X button
+                    zoomable: false
+                    });
+                }
+
+                // Buttons
+                const btn12 = document.getElementById('btn-12');
+                const btn13 = document.getElementById('btn-13');
+
+                function setActiveButton(editionNumber) {
+                    btn12.classList.toggle('active', editionNumber === 12);
+                    btn13.classList.toggle('active', editionNumber === 13);
+                }
+
+                btn12.addEventListener('click', () => {
+                    currentEdition = 12;
+                    setActiveButton(12);
+                    buildGallery(12);
+                });
+
+                btn13.addEventListener('click', () => {
+                    currentEdition = 13;
+                    setActiveButton(13);
+                    buildGallery(13);
+                });
+
+                // Initial load
+                setActiveButton(currentEdition);
+                buildGallery(currentEdition);
+            </script>
 
 
             <!-- / CONTENT AREA -->
@@ -233,7 +319,7 @@
       
           <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 
-          <script>
+          <!-- <script>
              // Initialize GLightbox
              const lightbox = GLightbox({
                   selector: '.glightbox',
@@ -242,6 +328,6 @@
                   closeButton: true,
                   zoomable: false
                 });
-          </script>
+          </script> -->
     </body>
 </html>
