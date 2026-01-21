@@ -2601,9 +2601,20 @@ a:focus {
 }
 
 
-
 .logo-tabs-container {
     display: flex;
     flex-direction: row;
     align-items: center;
 } 
+
+.partner-logo {
+  max-height: 120px;
+  width: auto;
+  opacity: 0.9;
+  transition: all 0.3s ease;
+}
+
+.partner-logo:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
