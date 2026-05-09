@@ -265,13 +265,25 @@
             const colDiv = document.createElement('div');
             colDiv.className = 'col-md-4 col-sm-6 space-bottom-30';
 
-            colDiv.innerHTML = `
-            <div class="gallery-item">
-                <a href="${imagePath}" class="glightbox" data-gallery="edition-${editionNumber}">
-                <img src="${imagePath}" alt="Conference Photo ${i}" class="img-responsive img-thumbnail" loading="eager">
-                </a>
-            </div>
-            `;
+            const isVideo = imagePath.toLowerCase().endsWith('.mp4');
+
+            if (isVideo) {
+              colDiv.innerHTML = `
+                <div class="gallery-item">
+                  <video controls class="img-responsive img-thumbnail" style="width:100%; height:250px; object-fit:cover;">
+                    <source src="${imagePath}" type="video/mp4">
+                  </video>
+                </div>
+              `;
+            } else {
+              colDiv.innerHTML = `
+                <div class="gallery-item">
+                  <a href="${imagePath}" class="glightbox" data-gallery="edition-${editionNumber}">
+                    <img src="${imagePath}" alt="Conference Photo ${i}" class="img-responsive img-thumbnail">
+                  </a>
+                </div>
+              `;
+            }
 
             galleryContainer.appendChild(colDiv);
         });
